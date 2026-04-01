@@ -17,7 +17,6 @@ The aim is to design the car using the basic components of a car, such as the ch
 Through  a xbox controller and the "xinput.h" library for Windows, the pc will read the buttons and analog joysticks in order to send them at serial port. A Raspberry Pico connected via UART at the same pc will get the data transfered, will decodify it and will send it throught a RF transmitter to another Raspberry Pi Pico located at the car. Finally, this Raspberry Pi Pico will process the data and will convert it to certain values to activate various PWM signals for the motors.
 
 ## What i learned
-Basics of:
 - Compilating projects with CMake
 - C language orientated to microcontrollers and their features, such as configuration, mascaring bits and processing data
 - Protocol communications, such as UART, I2C and SPI
