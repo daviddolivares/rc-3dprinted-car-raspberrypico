@@ -89,38 +89,38 @@ int main() {
                     buffer[i] = uart_getc(uart0);
                 }
 
-                unsigned char botones = buffer[0];                  // Buttons
+                unsigned char buttons = buffer[0];                  // Buttons
                 unsigned char brake_data = buffer[1];               // Brake
                 unsigned char throttle_data = buffer[2];            // Throttle
                 int16_t steer_data = buffer[3] | (buffer[4]<<8);    // Steer
 
-                // Scale data to values between 0 and 100
+                // Scale steer to values between 0 and 100
                 if (steer_data <= 0){
-                    steer = 50 - steer_data*(-1.0f) * 50/(1<<15);
-                }
+                    steer = 50 - steer_data*(-1.0f) * 50/(1<<15); // Because is from analog joysticks, so 32768 values for 
+                }                                                 // postive and 32768 values for negative part
                 else {
                     steer = 50 + steer_data * 50.0f/(1<<15);
                 }
                 // Scale throttle to values from 0 to 100
-                throttle = throttle_data*1.0f/(1<<8) * 100;
+                throttle = throttle_data*1.0f/(1<<8) * 100;        // From triggers, so 256 values
 
-                printf("Botones:%02X Steer:%d Steer data: %d, Throttle: %d Throttle data: %d\n", botones, steer, steer_data, throttle, throttle_data);
+                printf("Buttons:%02X Steer:%d Steer data: %d, Throttle: %d Throttle data: %d\n", buttons, steer, steer_data, throttle, throttle_data);
 
                 
-                if(botones & 0x20){                       // If pressed the gear up button
+                if(buttons & 0x20){                        // If pressed the gear up button
                     now = get_absolute_time();
                     interval = absolute_time_diff_us(prev_time, now);
                     
-                    if (gear <= 5 && interval >= 200000){ // Greater than 0.2 sec to prevent non wanted shifts
+                    if (gear <= 5 && interval >= 200000){  // Greater than 0.2 sec to prevent non wanted shifts
                         gear += 1;
                         prev_time = now;
                     }
                 }n
-                else if ((botones & 0x10)) {              // If pressed the gear down button
+                else if ((buttons & 0x10)) {               // If pressed the gear down button
                     now = get_absolute_time();
                     interval = absolute_time_diff_us(prev_time, now);
 
-                    if (gear >= 1 && interval >= 200000){ // Greater than 0.2 sec to prevent non wanted shifts
+                    if (gear >= 1 && interval >= 200000){  // Greater than 0.2 sec to prevent non wanted shifts
                         gear -= 1;
                         prev_time = now;
                     }
@@ -139,7 +139,7 @@ int main() {
                         packet.throttle,
                         packet.gear);
                 } else {
-                    printf("FAIL (sin ACK)\n");
+                    printf("FAIL (No ACK)\n");
                 }
 
                 sleep_ms(5);
