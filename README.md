@@ -18,18 +18,18 @@ Through  a xbox controller and the "xinput.h" library for Windows, the pc will r
 - Spherical joints
 
 ## Images
-Direction based on a servomotor, a zipper and shock absorbers:![Direction and Front Suspension](Direction_and_Front_Suspension.jpg)
-Acoupling of DC motor to the sequential transmission:![Rear Transmission](Motor_and_Transmission.jpg)
-Rear suspension with the differential coupled to the transmission:![a](Rear_Suspension.jpg)
-RF transmitters used for the telecommunication:![RF Transmitters](RF_Transmitters.jpg)
+Direction based on a servomotor, a zipper and shock absorbers:![Direction and Front Suspension](Images/Direction_and_Front_Suspension.jpg)
+Acoupling of DC motor to the sequential transmission:![Rear Transmission](Images/Motor_and_Transmission.jpg)
+Rear suspension with the differential coupled to the transmission:![Rear Suspension](Images/Rear_Suspension.jpg)
+RF transmitters used for the telecommunication:![RF Transmitters](Images/RF_Transmitters.jpg)
 
 ## Tested components
-- EEPROM memory: basic read/write functionality verified
+- EEPROM memory: basic read/write functionality verified with I2C protocol
 
 ## Future Improvements
 - Improve the mechanical structure to increase stability
 - Optimize the mechanical components for better performance
-- Add a TFT display to show telemetry (speed, batery level)
+- Add a TFT display to show telemetry (speed, batery level), using the SPI protocol
 - Integrate additional sensors
 
 ## What i learned
