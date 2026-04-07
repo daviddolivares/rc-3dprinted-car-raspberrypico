@@ -20,11 +20,11 @@ Through  a xbox controller and the "xinput.h" library for Windows, the pc will r
 ## Images
 Direction based on a servomotor, a zipper and shock absorbers:![Direction and Front Suspension](Direction_and_Front_Suspension.jpg)
 Acoupling of DC motor to the sequential transmission:![Rear Transmission](Motor_and_Transmission.jpg)
-Rear Suspension with the differential:![a](Rear_Suspension.jpg)
+Rear suspension with the differential coupled to the transmission:![a](Rear_Suspension.jpg)
 RF transmitters used for the telecommunication:![RF Transmitters](RF_Transmitters.jpg)
 
 ## Tested components
-- EEPROM memory, basic read/write functionality verified
+- EEPROM memory: basic read/write functionality verified
 
 ## Future Improvements
 - Improve the mechanical structure to increase stability
@@ -33,6 +33,7 @@ RF transmitters used for the telecommunication:![RF Transmitters](RF_Transmitter
 - Integrate additional sensors
 
 ## What i learned
+- Use of FreeCAD, a CAD parametric software 
 - Compilating projects with CMake and understanding its organization
 - C language orientated to microcontrollers and their features, such as configuration, bit masking and processing data
 - Protocol communications, such as UART, I2C and SPI
