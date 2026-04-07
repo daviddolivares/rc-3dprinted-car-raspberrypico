@@ -3,9 +3,13 @@ This project consists of building an RC car using 3D-printed parts, controlled b
 
 The aim is to design the car using the basic components of a car, such as the chassis, suspension, wheels, transmission, and other essential mechanical parts. Additionally, it will use an RF transmitter to control the car remotely, and it will be programmed using a Raspberry Pi Pico, implementing communication protocols such as UART, I2C, and SPI.
 
+## How it works
+Through  a xbox controller and the "xinput.h" library for Windows, the pc will read the buttons and analog joysticks in order to send them at serial port. A Raspberry Pico connected via UART at the same pc will get the data transfered, will decodify it and will send it throught a RF transmitter to another Raspberry Pi Pico located at the car. Finally, this Raspberry Pi Pico will process the data and will convert it to certain values to activate various PWM signals for the motors.
+
 ## Hardware
 - Raspberry Pi Pico
 - NRF24L01 RF transmitter
+- EEPROM memory
 - Bearings
 - Shock absorbers
 - Servomotors
@@ -13,11 +17,20 @@ The aim is to design the car using the basic components of a car, such as the ch
 - Cardan joints
 - Spherical joints
 
-## How it works
-Through  a xbox controller and the "xinput.h" library for Windows, the pc will read the buttons and analog joysticks in order to send them at serial port. A Raspberry Pico connected via UART at the same pc will get the data transfered, will decodify it and will send it throught a RF transmitter to another Raspberry Pi Pico located at the car. Finally, this Raspberry Pi Pico will process the data and will convert it to certain values to activate various PWM signals for the motors.
+## Tested components
+- EEPROM memory, basic read/write functionality verified
+
+## Images
+![Direction and Front Suspension](Direction and Front Suspension.jpg)
+
+## Future Improvements
+- Improve the mechanical structure to increase stability
+- Optimize the mechanical components for better performance
+- Add a TFT display to show telemetry (speed, batery level)
+- Integrate additional sensors
 
 ## What i learned
-- Compilating projects with CMake
-- C language orientated to microcontrollers and their features, such as configuration, mascaring bits and processing data
+- Compilating projects with CMake and understanding its organization
+- C language orientated to microcontrollers and their features, such as configuration, bit masking and processing data
 - Protocol communications, such as UART, I2C and SPI
 - Troubleshooting hardware issues
