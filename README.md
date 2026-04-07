@@ -18,9 +18,10 @@ Through  a xbox controller and the "xinput.h" library for Windows, the pc will r
 - Spherical joints
 
 ## Images
-![Direction and Front Suspension](Direction_and_Front_Suspension.jpg)
-![Rear Transmission](Rear_Suspension.jpg)
-![RF Transmitters](RF_Transmitters.jpg)
+Direction based on a servomotor, a zipper and shock absorbers:![Direction and Front Suspension](Direction_and_Front_Suspension.jpg)
+Acoupling of DC motor to the sequential transmission:![Rear Transmission](Motor_and_Transmission.jpg)
+Rear Suspension with the differential:![a](Rear_Suspension.jpg)
+RF transmitters used for the telecommunication:![RF Transmitters](RF_Transmitters.jpg)
 
 ## Tested components
 - EEPROM memory, basic read/write functionality verified
