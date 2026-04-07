@@ -17,11 +17,13 @@ Through  a xbox controller and the "xinput.h" library for Windows, the pc will r
 - Cardan joints
 - Spherical joints
 
+## Images
+![Direction and Front Suspension](Direction_and_Front_Suspension.jpg)
+![Rear Transmission](Rear_Suspension.jpg)
+![RF Transmitters](RF_Transmitters.jpg)
+
 ## Tested components
 - EEPROM memory, basic read/write functionality verified
-
-## Images
-![Direction and Front Suspension](Direction and Front Suspension.jpg)
 
 ## Future Improvements
 - Improve the mechanical structure to increase stability
