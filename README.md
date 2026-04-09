@@ -9,7 +9,6 @@ Through  a xbox controller and the "xinput.h" library for Windows, the pc will r
 ## Hardware
 - Raspberry Pi Pico
 - NRF24L01 RF transmitter
-- EEPROM memory
 - Bearings
 - Shock absorbers
 - Servomotors
@@ -24,7 +23,7 @@ Rear suspension with the differential coupled to the transmission:![Rear Suspens
 RF transmitters used for the telecommunication:![RF Transmitters](Images/RF_Transmitters.jpg)
 
 ## Tested components
-- EEPROM memory: basic read/write functionality verified with I2C protocol
+- EEPROM memory: basic read/write functionality verified with I2C protocol. It could be used to save the last gear shift or to save some telemetry.
 
 ## Future Improvements
 - Improve the mechanical structure to increase stability
@@ -37,4 +36,5 @@ RF transmitters used for the telecommunication:![RF Transmitters](Images/RF_Tran
 - Compilating projects with CMake and understanding its organization
 - C language orientated to microcontrollers and their features, such as configuration, bit masking and processing data
 - Protocol communications, such as UART, I2C and SPI
+- Understanding technics datasheets
 - Troubleshooting hardware issues
